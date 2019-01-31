@@ -23,9 +23,12 @@ public class GameLogic : MonoBehaviour
         ProcessState();
     }
 
-    private void ChangeState(int nextState)
+    private void ChangeState(int selection)
     {
-        ChangeState(currentState.GetNextStates()[--nextState]);
+        var availableStates = currentState.GetNextStates();
+
+        if (availableStates.Length >= selection)
+            ChangeState(availableStates[--selection]);
     }
 
     private void ChangeState(State nextState)
