@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/State")]
+[CreateAssetMenu(menuName = "Game/State")]
 public class State : ScriptableObject
 {
     [TextArea(14, 10)]
